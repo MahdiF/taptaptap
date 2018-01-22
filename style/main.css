@@ -17,7 +17,8 @@ h1, h2, h3, h4, p {
   margin: 0; }
 
 .section-home {
-  margin-bottom: 20rem; }
+  position: relative;
+  overflow: hidden; }
 
 .section-home::before {
   content: "";
@@ -36,7 +37,8 @@ h1, h2, h3, h4, p {
   text-align: center;
   min-height: 100vh;
   position: relative;
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  overflow: hidden; }
 
 .logo-container {
   display: inline-block;
@@ -46,6 +48,7 @@ h1, h2, h3, h4, p {
 
 .logo {
   background: url("../images/logo.svg") no-repeat;
+  background-size: contain;
   width: 18rem;
   height: 8.8rem;
   margin: 0 auto;
@@ -128,6 +131,11 @@ h1, h2, h3, h4, p {
 .btn-outline:hover {
   box-shadow: inset 0 0 0 2px #FF2C5B; }
 
+.btn-outline:active {
+  background: #000;
+  box-shadow: inset 0 0 0 2px #041525;
+  color: white; }
+
 .screenshots-container {
   margin-top: 3.2rem;
   position: absolute;
@@ -135,7 +143,10 @@ h1, h2, h3, h4, p {
   left: 50%;
   transform: translateX(-50%);
   font-size: 1rem;
-  max-height: 50vh; }
+  padding-top: 2rem;
+  max-height: 50vh;
+  width: 100%;
+  overflow: hidden; }
 
 .desktop-screenshot {
   background: url("../images/desktop-screenshot.png") center 2rem #041C30 no-repeat;
@@ -291,7 +302,7 @@ h1, h2, h3, h4, p {
 
 .section-about {
   background: #FAFAFA;
-  padding: 10rem 0; }
+  padding: 5rem 0; }
 
 .section-title {
   text-align: center;
@@ -352,7 +363,7 @@ h1, h2, h3, h4, p {
 .section-timeline {
   background: #FAFAFA;
   width: 100%;
-  padding: 10rem 0; }
+  padding: 5rem 0; }
 
 .timeline_cards_container {
   max-width: 82rem;
@@ -493,7 +504,6 @@ h1, h2, h3, h4, p {
   color: rgba(255, 255, 255, 0.7); }
 
 .credits-card-container {
-  overflow: auto;
   margin: 8rem auto 0; }
 
 .credits-card {
@@ -535,7 +545,16 @@ a.credits-card-name-title {
 /*   responsive habibi   */
 @media screen and (max-width: 640px) {
   html {
-    font-size: 8px; } }
+    font-size: 8px; }
+
+  .home-subtitle {
+    font-size: 3.8rem; }
+
+  .about-container {
+    padding: 5rem 3rem; }
+
+  .credits-section-wrapper {
+    padding: 0 2rem; } }
 @keyframes pulsing {
   0% {
     transform: scale(1);

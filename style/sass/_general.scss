@@ -23,7 +23,8 @@ h1, h2, h3, h4, p {
 }
 
 .section-home {
-    margin-bottom: rem(200);
+    position: relative;
+    overflow: hidden;
 }
 .section-home::before {
     content: "";
@@ -46,6 +47,7 @@ h1, h2, h3, h4, p {
     min-height: 100vh;
     position: relative;
     padding-top: rem(50);
+    overflow: hidden;
 }
 
 .logo-container {
@@ -57,6 +59,7 @@ h1, h2, h3, h4, p {
 
 .logo {
     background: url('../images/logo.svg') no-repeat;
+    background-size: contain;
     width: rem(180);
     height: rem(88);
     margin: 0 auto;
@@ -147,6 +150,11 @@ h1, h2, h3, h4, p {
 .btn-outline:hover {
     box-shadow: inset 0 0 0 2px #FF2C5B;
 }
+.btn-outline:active {
+    background: #000;
+    box-shadow: inset 0 0 0 2px #041525;
+    color: white;
+}
 
 
 .screenshots-container {
@@ -156,7 +164,10 @@ h1, h2, h3, h4, p {
     left: 50%;
     transform: translateX(-50%);
     font-size: rem(10);
+    padding-top: rem(20);
     max-height: 50vh;
+    width: 100%;
+    overflow: hidden;
 }
 .desktop-screenshot {
     background: url('../images/desktop-screenshot.png') center rem(20) $secondary-dark-blue no-repeat;
@@ -324,7 +335,7 @@ h1, h2, h3, h4, p {
 
 .section-about {
     background: $super-light-grey;
-    padding: rem(100) 0;
+    padding: rem(50) 0;
 }
 
 
@@ -399,7 +410,7 @@ h1, h2, h3, h4, p {
 .section-timeline {
     background: $super-light-grey;
     width: 100%;
-    padding: rem(100) 0;
+    padding: rem(50) 0;
 }
 
 
@@ -559,7 +570,6 @@ h1, h2, h3, h4, p {
 }
 
 .credits-card-container {
-    overflow: auto;
     margin: rem(80) auto 0;
 }
 
@@ -593,6 +603,7 @@ h1, h2, h3, h4, p {
     border-radius: 2px;
 }
 
+
 a.credits-card-name-title {
     color: $light-blue;
     text-decoration: none;
@@ -610,25 +621,13 @@ a.credits-card-name-title {
     html {
         font-size: 8px;
     }
+    .home-subtitle {
+        font-size: rem(38);
+    }
+    .about-container {
+        padding: rem(50) rem(30);
+    }
+    .credits-section-wrapper {
+        padding: 0 rem(20);
+    }
 }
-
-
-// ** To-do ** :
-// -[DONE] Add all names and photos to the footer
-// -[DONE] Add all photos to the timeline
-// -[DONE] Add all links to timeline cards
-// -[WON'T DO] Re-write the about section
-// -[ ] Make the menu appear when scroll to a specific point
-// -[ ] Scroll to position when clikcing links in the menu
-
-// --------------------------------------------------
-
-// -[ ] Write CSS for a unified button without paddings, and add paddings and min-width to each button as a modifier.
-// -[ ] Separate the logo into 3 layers, each layer would have the text in a different color, then animate.
-// -[ ] Add active effect on the "View on Github button" and the button in the timeline.
-// -[ ] Make the logo responsive using "EM";
-// -[ ] Favicon + OG Icons for the social media.
-
-
-// -[DONE] The arrow down circle should glow + fade out when scrolling 50% of vh
-// -[DONE] Also make the avatar in the bio responsive using em;
