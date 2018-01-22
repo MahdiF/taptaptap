@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>refreshIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="refreshIcon" fill="#FFFFFF">
+            <path d="M13.6,23 C10.656,23 8.0112,21.7537308 6.1192,19.7700385 L8.5624,19.7700385 C9.9912,20.7804615 11.7224,21.3846154 13.6,21.3846154 C18.4592,21.3846154 22.4,17.4067308 22.4,12.5 C22.4,7.59326923 18.4592,3.61538462 13.6,3.61538462 C10.1848,3.61538462 7.2544,5.58938462 5.808,8.46153846 L8,8.46153846 L4,13.3076923 L0,8.46153846 L4.0872,8.46153846 C5.648,4.67992308 9.2848,2 13.6,2 C19.344,2 24,6.69996154 24,12.5 C24,18.3000385 19.344,23 13.6,23 L13.6,23 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

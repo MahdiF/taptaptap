@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>pauseIconLarge</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="48" height="48" rx="24"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="48" height="48" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pauseIconLarge">
+            <use id="Rectangle-10" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="4" opacity="0.2" xlink:href="#path-1"></use>
+            <path d="M15,13.507562 C15,12.6749585 15.6657972,12 16.5,12 C17.3284271,12 18,12.6686896 18,13.507562 L18,35.492438 C18,36.3250415 17.3342028,37 16.5,37 C15.6715729,37 15,36.3313104 15,35.492438 L15,13.507562 Z M30,13.507562 C30,12.6749585 30.6657972,12 31.5,12 C32.3284271,12 33,12.6686896 33,13.507562 L33,35.492438 C33,36.3250415 32.3342028,37 31.5,37 C30.6715729,37 30,36.3313104 30,35.492438 L30,13.507562 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
