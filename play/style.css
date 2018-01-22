@@ -64,9 +64,11 @@ hr {
   width: 100%;
   max-width: 640px;
   height: 640px;
-  margin: 100px auto;
   box-shadow: 0 0 250px 0 rgba(0,0,0,0.4);
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .fixed-100w-wrapper {
