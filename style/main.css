@@ -207,8 +207,8 @@ h1, h2, h3, h4, p {
 .arrow-down-container {
   background: #ffffff;
   display: block;
-  width: 16rem;
-  height: 16rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
   position: absolute;
   bottom: 3.2rem;
