@@ -1,0 +1,681 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* reseting base font-size to 10px */
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  /*transition: all ease 0.2s;*/
+
+  /* Disable text selection/highlighting */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+
+  /* Remove Gray Highlight When Tapping Links in Mobile Safari/Chrome */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
+}
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2.2rem; /* base font size is 22px */
+  background: #ffffff;
+  color: white;
+  overflow: hidden; /* always hide scrollbars */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+body, h1,h2,h3, p, menu, button{
+	margin:0;
+	padding:0;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.main-wrapper {
+  background: url('images/backgroundPattern.svg') repeat rgb(11, 29, 49);
+  width: 100%;
+  max-width: 360px;
+  height: 640px;
+  margin: 100px auto;
+  box-shadow: 0 0 50px 0 #000000;
+  position: relative;
+}
+
+.fixed-100w-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fixed-75w-wrapper {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+
+.page-cont {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url('images/backgroundPattern.svg') repeat rgb(11, 29, 49);
+}
+
+/* ------ Different backgrounds for the pages ------ */
+.page-faded-bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background: rgba(11, 29, 49, 0.9);
+}
+
+/* ::after - Animated Gradient Background */
+.anmtd-grdnt-bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: anmtdOpcty 2s alternate infinite ease-in-out;
+  -webkit-animation: anmtdOpcty 2s alternate infinite ease-in-out;
+  -moz-animation: anmtdOpcty 2s alternate infinite ease-in-out;
+  -o-animation: anmtdOpcty 2s alternate infinite ease-in-out;
+}
+
+/* Blue Background Gradient */
+.blu-grdnt-bg::after {
+  background-image: -webkit-linear-gradient(270deg, rgba(11,29,48,0.00) 0%, rgba(88,209,255,0.35) 100%);
+  background-image: -o-linear-gradient(270deg, rgba(11,29,48,0.00) 0%, rgba(88,209,255,0.35) 100%);
+  background-image: linear-gradient(0deg, rgba(11,29,48,0.00) 0%, rgba(88,209,255,0.35) 100%);
+}
+
+/* Red Background Gradient */
+.rd-grdnt-bg::after {
+  background-image: -webkit-linear-gradient(270deg, rgba(11,29,48,0.00) 0%, rgba(255,19,68,0.35) 100%);
+  background-image: -o-linear-gradient(270deg, rgba(11,29,48,0.00) 0%, rgba(255,19,68,0.35) 100%);
+  background-image: linear-gradient(0deg, rgba(11,29,48,0.00) 0%, rgba(255,19,68,0.35) 100%);
+}
+
+/* Green Background Gradient */
+.grn-grdnt-bg::after {
+  background-image: -webkit-linear-gradient(270deg, rgba(11,29,48,0.00) 0%, rgba(0,255,107,0.35) 100%);
+  background-image: -o-linear-gradient(270deg, rgba(11,29,48,0.00) 0%, rgba(0,255,107,0.35) 100%);
+  background-image: linear-gradient(0deg, rgba(11,29,48,0.00) 0%, rgba(0,255,107,0.35) 100%);
+}
+
+
+/* Remove any background */
+.no-bg {
+  background: none;
+}
+
+.mrgn-btm-1em {
+  margin-bottom: 1em;
+}
+
+/* ------ ALL PAGES ------ */
+.page-play-area { z-index: 1; display: block; }
+.page-game-menu { z-index: 2; display: none; }
+.page-tutorial { z-index: 3; display: none; }
+.page-level-info { z-index: 4; display: none; }
+.page-pause-menu { z-index: 5; display: none; }
+.page-level-passed { z-index: 6; display: none; }
+.page-times-up { z-index: 7; display: none; }
+.page-you-lost { z-index: 8; display: none; }
+.page-high-score { z-index: 9; display: none; }
+/*  -------- Game play area page -------- */
+.page-play-area {
+}
+
+.page-play-area::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: -webkit-linear-gradient(#0B1D31 0%, rgba(11,29,49,0.00) 100%);
+  background-image: -o-linear-gradient(#0B1D31 0%, rgba(11,29,49,0.00) 100%);
+  background-image: linear-gradient(#0B1D31 0%, rgba(11,29,49,0.00) 100%);
+}
+
+.game-stats-cont {
+  width: 100%;
+  height: 10%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gm-stats-time-progress {
+  background: #58D1FF;
+  width: 75%;
+  height: 4%;
+}
+
+.gm-stats-wrapper {
+  width: 94%;
+  height: 96%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gm-stats-vcont {
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  float:left;
+  width: calc(100%/3);
+  position: relative;
+}
+
+.gm-stats-pause-button {
+  width: 44px;
+  height: 100%;
+  border: none;
+  background: url('images/pauseIconSmall.svg') center no-repeat;
+  float: left;
+}
+.gm-stats-pause-button:active {
+  transform: scale(2);
+}
+
+#gm-stats-tap-count {
+  color: #58D1FF;
+}
+
+.stat-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gm-stats-title {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.gm-stats-value {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+/*   game play area   */
+.game-play-area {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tappable circles */
+.tpbl-circle {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+.tpbl-circle::before, .tpbl-circle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: beating 1.5s infinite ease-in-out;
+  -webkit-animation: beating 1.5s infinite ease-in-out;
+  -moz-animation: beating 1.5s infinite ease-in-out;
+  -o-animation: beating 1.5s infinite ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+.tpbl-circle::after {
+  animation: beating 1.5s 0.4s infinite ease-in-out;
+  -webkit-animation: beating 1.5s 0.4s infinite ease-in-out;
+  -moz-animation: beating 1.5s 0.4s infinite ease-in-out;
+  -o-animation: beating 1.5s 0.4s infinite ease-in-out;
+}
+.tpbl-circle:active {
+  transform: scale(2);
+}
+
+.c-blue {
+  box-shadow: inset 0 0 0 17px #58D1FF;
+}
+.c-blue::before, .c-blue::after {
+  box-shadow: inset 0 0 0 2px #58D1FF;
+}
+#cBlue {
+  top: 80px;
+  left: 216px;
+}
+
+.c-red {
+  box-shadow: inset 0 0 0 17px #FA4760;
+}
+.c-red::before, .c-red::after {
+  box-shadow: inset 0 0 0 2px #FA4760;
+}
+#cRed {
+  top:220px;
+  left: 116px;
+}
+
+.c-white {
+  box-shadow: inset 0 0 0 17px #ffffff;
+}
+.c-white::before, .c-white::after {
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.sbmt-tryagain-txt {
+  width: 100%;
+  margin: 0 0 0.75em 0;
+}
+.submit-circle {
+  display:block;
+  position: relative;
+  margin: 0 auto;
+}
+
+
+/*  -------- Game menu page -------- */
+
+.page-game-menu {
+  background: url('images/backgroundPattern.svg') repeat rgb(11, 29, 49);
+}
+
+.gm-menu-header-cont {
+  overflow: hidden;
+  height: 50%;
+  font-size: 1em;
+  padding: 4em 0 0 0;
+}
+
+.gm-menu-logo-bg {
+  position: relative;
+  margin: 0 auto;
+  width: 3.5em;
+  height: 3.5em;
+  box-shadow: inset 0 0 0 1.4em #58D1FF;
+}
+
+.gm-menu-logo-bg::before, .gm-menu-logo-bg::after {
+  box-shadow: inset 0 0 0 2px #58D1FF;
+}
+
+.gm-menu-title, .gm-menu-subtitle {
+  text-align: center;
+  width: 100%;
+}
+.gm-menu-title {
+  font-size: 1.45454545454545em;
+  font-weight: 600;
+  margin: 1em 0 0 0;
+}
+
+.gm-menu-subtitle {
+  font-size: 1em;
+  font-weight: 400;
+  color: #58D1FF;
+}
+
+.gm-menu-btns-cont {
+  height: 50%;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.gm-btn {
+  display: block;
+  width: 75%;
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: white;
+  padding: 0.8em 0;
+  border-radius: 3em;
+  margin: 0.9em auto 0;
+  font-weight: 300;
+  border: 2px solid white;
+  text-transform: uppercase;
+}
+.gm-btn:active {
+  transform: scale(1.1);
+  background: white;
+  color: rgba(11, 29, 49, 1);
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+
+.btn-blue {
+  border-color: #58D1FF;
+  font-weight: 600;
+}
+.btn-blue:active {
+  background: #58D1FF;
+}
+
+
+/* Game Tutorial page */
+.page-tutorial {
+  background: url('images/backgroundPattern.svg') repeat rgb(11, 29, 49);
+  position: relative;
+}
+
+.tut-circle {
+  position: relative;
+  margin: 0 auto;
+}
+
+.tut-arrow {
+  height: 4em; /* 22px * 4 = 88px */
+  width: 100%;
+  background: url('images/tapsIcon.svg') center center no-repeat;
+  animation: anmtdBG 0.5s alternate infinite cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: anmtdBG 0.5s alternate infinite cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-animation: anmtdBG 0.5s alternate infinite cubic-bezier(0.4, 0, 0.2, 1);
+  -o-animation: anmtdBG 0.5s alternate infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tut-text {
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+/* Game level title & goals page */
+.page-level-info {
+}
+
+.lvl-info-cont {
+  border-radius: 4px;
+  border: solid 2px white;
+  font-size: 1em;
+  margin: 0 0 0.75em;
+}
+
+.lvl-title {
+  border-bottom: solid 2px rgba(255, 255, 255, 0.3);
+  padding: 0.75em 0;
+}
+
+.lvl-goals-cont {
+  overflow: hidden;
+}
+
+.lvl-taps-cont, .lvl-time-cont {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 0.75em 0;
+}
+
+.lvl-taps-cont {
+  border-right: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.lvl-info-taps-icon, .lvl-info-time-icon {
+  width: 100%;
+  height: 32px;
+  margin: 0 auto 0.4545454545em; /* 0.4545454545 is 10px which came from 10/22 */
+}
+
+.lvl-info-taps-icon {
+  background: url('images/tapsIcon.svg') center no-repeat;
+}
+
+.lvl-time-cont {
+  border-left: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.lvl-info-time-icon {
+  background: url('images/timeIcon.svg') center no-repeat;
+}
+
+.lvl-extra-goals {
+  font-size: 0.8em;
+  margin: 0 0 2em 0;
+}
+
+.evil-circle {
+  position: relative;
+  display: inline-block;
+  transform: scale(0.5);
+  vertical-align: middle;
+}
+.evil-circle:active {
+  transform: scale(0.5);
+}
+
+
+
+/* GAME PAUSE MENU PAGE */
+.gm-puz-title-cont {
+  margin: 0 0 1.5em 0;
+}
+
+.puz-icon {
+  background: url('images/pauseIconLarge.svg') no-repeat center;
+  height: 48px;
+  width: 100%;
+  margin: 0 0 0.3em 0;
+}
+
+.gm-puz-title {
+  font-size: 1.4545454545em; /* 32px */
+}
+
+.puz-menu-btnz-cont {
+  margin: 2em 0 0 0;
+}
+
+.pm-rstrt-lvl-btn {
+  position: relative;
+  padding-left: 1.5em;
+}
+.pm-rstrt-lvl-btn::after {
+  content: "";
+  position: absolute;
+  left: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url('images/refreshIcon.svg') no-repeat;
+}
+.pm-rstrt-lvl-btn:active.pm-rstrt-lvl-btn::after{
+  background: url('images/refreshIconBlue.svg') no-repeat;
+}
+
+.puz-menu-btn {
+  width: 100%;
+}
+
+
+/* LEVEL PASSED PAGE */
+.page-level-passed {
+}
+
+.lvl-fnshd-title-cont {
+  margin: 0 0 0.75em 0;
+}
+
+.lvl-fnshd-icon {
+  width: 100%;
+  height: 48px;
+  margin: 0 0 0.75em 0;
+}
+
+.flag-icon {
+  background: url('images/flagIcon.svg') no-repeat center;
+}
+
+
+.lvl-fnshd-ttl-txt-reg, .lvl-fnshd-ttl-txt-bld {
+  font-size: 1.4545454545em;
+  font-weight: 300;
+}
+.lvl-fnshd-ttl-txt-reg {
+}
+
+.lvl-fnshd-ttl-txt-bld {
+  font-weight: 600;
+}
+
+.lvl-fnshd-score-cont {
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding: 0.75em 0;
+  margin: 0 0 2em 0;
+}
+
+.lvl-fnshd-score-txt {
+  color: #58D1FF;
+}
+
+.lvl-fnshd-score-nmb {
+  font-size: 1.4545454545em;
+  font-weight: 600;
+}
+
+
+/* LEVEL PASSED & GAME OVER PAGES */
+
+.times-up-icon {
+  background: url('images/watchIcon.svg') no-repeat center;
+}
+
+.you-lost-icon {
+  background: url('images/bugIcon.svg') no-repeat center;
+}
+
+.lvl-fnshd-highscore-icon {
+  background: url('images/gemIcon.svg') no-repeat center;
+  width: 100%;
+  height: 24px;
+  margin-top: 0.5em;
+}
+
+/* =================== ADMIN CONTROL PANEL =================== */
+.admin-cp {
+  background: rgb(32, 38, 43);
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  z-index: 99999;
+  width: 500px;
+  text-transform: none;
+  padding: 50px;
+  border-radius: 4px;
+  text-align: left;
+}
+.admin-cp h4 {
+  margin: 0 0 20px 0;
+}
+
+.vzbltyLabel {
+  display: inline-block;
+  width: 100%;
+  margin: 0 10px 15px 10px;
+  float: left;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.toggleCheckbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  margin: 0 10px 0 0;
+}
+.toggleCheckbox::before {
+  visibility: visible;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: solid 1px rgb(64, 175, 132);
+}
+.toggleCheckbox:checked::before {
+  background: rgb(64, 175, 132);
+}
+/* ========================================================== */
+
+/*-------------------------------------------------------------------------------*/
+/*  animation habibi's  */
+@keyframes beating {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity; 0;
+  }
+}
+
+@keyframes anmtdBG {
+  0% {
+    background-position: center 0.5em;
+  }
+  100% {
+    background-position: center 1.5em;
+  }
+}
+
+@keyframes anmtdOpcty {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+/*   responsive habibi   */
+@media screen and (max-width: 640px) {
+  .main-wrapper {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+
+@media screen and (max-height: 480px) {
+  body {
+    font-size: 1.6rem;
+  }
+}

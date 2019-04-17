@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<head>
+
+	<title>Emoji Game</title>
+	<link href="style.css" rel="stylesheet">
+
+
+</head>
+<body ontouchstart="">
+	<div class="main-wrapper">
+		<!-- main menu -->
+		<div id="menuCont" class="content-wrapper menu-cont">
+			<div class="logo"></div>
+			<div class="sec-title-emoji"></div>
+			<menu class="menu-buttons-cont">
+				<button id="newGameButton" type="button" class="primary-button new-game-button">New Game</button>
+				<button id="highScoresButton" type="button" class="primary-button menu-button">High Scores</button>
+				<button id="aboutButton" type="button" class="primary-button menu-button">About</button>
+			</menu>
+		</div>
+
+		<!-- level title -->
+		<div id="levelTitleCont" class="content-wrapper level-cont">
+			<h2 id="levelNumberTitle" class="level-num">Level 999</h2>
+			<h3 id="levelGoalTitle" class="level-goal">Try to catch X emojis in Y seconds.</h3>
+			<button id="startLevelButton" type="button" class="primary-button start-level-button" name="button">Start</button>
+		</div>
+
+		<!-- game space -->
+		<div id="gameSpaceCont" class="content-wrapper game-space-cont">
+			<div class="game-header">
+				<div class="game-stats-cont">
+					<span class="game-stat stat-level">
+						<p class="stat-title">Level</p>
+						<p id="inGameLevelNum" class="stat-num">999</p>
+					</span>
+					<span class="game-stat stat-score">
+						<p class="stat-title">Score</p>
+						<p id="gameScore" class="stat-num">0</p>
+					</span>
+					<span class="game-stat stat-time">
+						<p class="stat-title">Time</p>
+						<p id="gameTime" class="stat-num">0</p>
+					</span>
+				</div>
+				<div class="time-progress">
+					<div id="progressLine" class="progress-line"></div>
+				</div>
+			</div>
+			<div id="gameSpace" class="game-space">
+			</div>
+			<button id="pauseGameButton" class="pause-button" type="button" name="button">Pause</button>
+		</div>
+
+		<!-- time's up -->
+		<div id="timesUpCont" class="content-wrapper times-up-cont">
+			<h2 class="pri-title white-text">Time's Up!</h2>
+			<h3 id="timesUpDescription" class="sec-title white-text">You catched 16 emoticons, and you had to catch 40 at least to complete this level.</h3>
+			<button id="tryAgainButton" type="button" class="primary-button all-white-button">Try Again 👍</button>
+			<button id="timesUpEndGameButton" type="button" class="primary-button all-white-button">End Game 😭</button>
+		</div>
+
+		<!-- game paused -->
+		<div id="gamePausedCont" class="content-wrapper game-pasued-cont">
+			<h2 class="pri-title white-text">Game Paused!</h2>
+			<h3 id="gamePausedDescription" class="sec-title white-text">You catched 16 of the 40 emoticons you have to catch for this level.</h3>
+			<button id="continueGameButton" type="button" class="primary-button all-white-button">Continue 👍</button>
+			<button id="gamePauseEndGameButton" type="button" class="primary-button all-white-button">End Game 😭</button>
+		</div>
+
+		<!-- level passed -->
+		<div id="levelPassedCont" class="content-wrapper level-passed-cont">
+			<h2 class="pri-title black-text">You Won!</h2>
+			<h3 id="levelPassedDescreption" class="sec-title black-text">You catched all the 30 emoticons!</h3>
+			<hr>
+			<h3 id="nextLevelDesc" class="sec-title black-text">Now try to catch 40 emoticons.</h3>
+			<button id="continueNextLevelButton" type="button" class="primary-button all-black-button">Level 2 👍</button>
+		</div>
+
+	</div>
+
+	<!-- logic script -->
+	<script src="js/habibiScript.js"></script>
+</body>
+</html>

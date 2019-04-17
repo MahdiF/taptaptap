@@ -1,0 +1,353 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  transition: all ease 0.2s;
+
+  /* Disable text selection/highlighting */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+
+  /* Remove Gray Highlight When Tapping Links in Mobile Safari/Chrome */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body{
+  font: caption;
+  font-family: 'Open Sans', 'Roboto','Helvetica Neue', 'Lucida Grande', sans-serif;
+  background: rgb(30, 30, 30);
+  font-size: 20px;
+
+  /* always hide scrollbars */
+  overflow: hidden;
+}
+
+body, h1,h2,h3, p, menu{
+	margin:0;
+	padding:0;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.white-text {
+  color: white;
+}
+
+.black-text {
+  color: black;
+}
+
+.main-wrapper {
+  background: yellow;
+  width: 360px;
+  height: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;;
+  top:0;
+  left:0;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* ---------- Pages - [START] ---------- */
+.menu-cont { z-index: 0; display: block;}
+.level-cont{ z-index: 1; display: none;}
+.game-space-cont { z-index: 2; display: none;}
+.times-up-cont { z-index: 3; display: none;}
+.game-pasued-cont { z-index: 4; display: none;}
+.level-passed-cont { z-index: 5; display: none;}
+/* ---------- Pages - [END] ---------- */
+
+
+
+/* -------------- Main Menu -------------- */
+/*Menu Container*/
+.menu-cont {
+  background-image: linear-gradient(0deg, #FF138E 0%, #FF0855 100%);
+  color: white;
+  text-align: center;
+  overflow: auto;
+}
+
+.logo {
+  width: 242px;
+  height: 132px;
+  background: url('images/logo.svg') no-repeat;
+  margin: 30px auto 0;
+}
+
+.sec-title-emoji {
+  width: 72px;
+  height: 32px;
+  margin: 20px auto 0;
+  background: url('images/sec-title-emoji.png') no-repeat;
+  background-size: 100%;
+}
+
+.menu-buttons-cont {
+  margin: 20px auto 0;
+}
+
+.primary-button {
+  width: 100%;
+  height: 60px;
+  line-height: 52px;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 4% auto 0;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+}
+
+.menu-button {
+  color: white;
+  border: 2px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+  outline: none;
+}
+
+.new-game-button {
+  border: 2px solid rgba(255,255,255,1);
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.menu-button:active, .new-game-button:active{
+  background: white;
+  color: #FF0855;
+  transform: scale(1.1);
+}
+
+
+/* -------------- Level Title -------------- */
+/*Level Title Container*/
+.level-cont{
+  background: rgba(255,255,255,1);
+}
+
+.level-num {
+  margin: 60px 0 0 0;
+  text-transform: uppercase;
+}
+
+.level-goal {
+  margin: 10px 0 0 0;
+  font-weight: 400;
+  color: rgba(0,0,0,0.6);
+}
+
+.start-level-button {
+  border: solid 2px #FF0855;
+  color: #FF0855;
+  margin: 60px 0 0 0;
+}
+
+.start-level-button:active {
+  background: #FF0855;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* -------------- Game Space -------------- */
+.game-space-cont {
+  background: white;
+  padding: 0;
+}
+
+/* ----------- Heights for game main screen elemtns ----------- */
+.game-header { height: 10%; }
+.game-space { height: 80%; }
+.pause-button { height: 10%; }
+/* ----------------------------------------------------------- */
+
+.game-header {
+  color: white;
+  position: relative;
+}
+
+.game-stats-cont {
+  margin: 0 auto;
+  background-image: linear-gradient(-90deg, #FF138E 0%, #FF0855 100%);
+  height: 94%;
+  font-size: 0;
+  padding: 2% 0 0 0;
+}
+
+.game-stat {
+  display: inline-block;
+  width: calc(100% / 3);
+}
+
+.stat-title {
+  font-size: 12px;
+}
+
+.stat-num {
+  font-size: 18px;
+}
+
+.stat-level {
+  padding: 0 15% 0 0;
+}
+
+.stat-time {
+  padding: 0 0 0 15%;
+}
+
+.time-progress {
+  height: 6%;
+}
+
+.progress-line {
+  background: #00E3FF;
+  /*width: 100%;*/
+  height: 100%;
+}
+
+.game-space {
+  background: white;
+  width: 100%;
+  position: relative;
+}
+
+.pause-button {
+  width: 100%;
+  border: none;
+  background: #00E3FF;
+  color: rgba(0,0,0,0.8);
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+}
+
+.pause-button:active {
+  transform: scale(1.1);
+  background: #07cae2;
+  box-shadow: 0 -10px 50px -10px rgba(7, 202, 226, 0.5);
+}
+
+#emoticon {
+  font-size: 60px;
+  text-align: center;
+  width: 13.75%;
+  position: absolute;
+  cursor: pointer;
+  vertical-align: middle;
+
+  animation: growAnimation 0.15s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s backwards;
+  -webkit-animation: growAnimation 0.15s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s backwards;
+  -moz-animation: growAnimation 0.15s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s backwards;
+}
+
+/* -------------- Time's Up -------------- */
+.times-up-cont {
+  background: rgba(100,0,0,0.9);
+}
+
+.pri-title {
+  text-transform: uppercase;
+  margin: 60px 0 0 0;
+}
+
+.sec-title {
+  font-weight: 400;
+  margin: 10px 0 30px 0;
+}
+
+.all-white-button {
+  border: 2px solid rgba(255,255,255,1);
+  color: white;
+  cursor: pointer;
+  outline: none;
+  margin: 30px auto 0;
+}
+
+.all-white-button:active{
+  background: white;
+  color: #000000;
+  transform: scale(1.1);
+}
+
+/* -------------- Game Paused -------------- */
+.game-pasued-cont {
+  background: rgba(0,0,0,0.9);
+}
+
+/* -------------- Level Passed -------------- */
+.level-passed-cont {
+  background: rgba(0,255,150,0.95);
+}
+
+.all-black-button {
+  border: 2px solid rgba(0,0,0,1);
+  color: black;
+  cursor: pointer;
+  outline: none;
+  margin: 30px auto 0;
+}
+
+.all-black-button:active{
+  background: black;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.5);
+}
+
+
+/*
+  Animation habibi
+*/
+@-webkit-keyframes growAnimation {
+  0%   {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+@keyframes growAnimation {
+  0%   {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* Make me responsive */
+@media screen and (max-width: 640px){
+  .main-wrapper {
+    width: 100%;
+    height:100vh;
+    max-height: 100vh;
+  }
+}

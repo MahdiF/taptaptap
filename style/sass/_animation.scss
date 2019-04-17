@@ -1,0 +1,28 @@
+@keyframes pulsing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0px 200px 20px rgba(88, 209, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0px 200px 20px rgba(88, 209, 255, 0.5);
+  }
+}

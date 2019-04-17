@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  transition: all ease 0.5s;
+}
+
+body{
+  font-family: 'Roboto','Helvetica Neue', 'Lucida Grande', sans-serif;
+  position: relative;
+}
+
+body, h1,h2,h3, p{
+	margin:0;
+	padding:0;
+}
+
+#main-container {
+  background: blue;
+  width: 500px;
+  height: 500px;
+}
+
+#red-box {
+  font-size: 60px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  /*background: rgba(173, 255, 0, 0.18);*/
+  position: absolute;
+  border-radius: 50%;
+  /*top: 500px;*/
+  /*left: 100px;*/
+  cursor: pointer;
+  vertical-align: middle;
+
+  animation: growAnimation 0.2s ease-in-out 0s;
+  -webkit-animation: growAnimation 0.2s ease-in-out 0s;
+  -moz-animation: growAnimation 0.2s ease-in-out 0s;
+}
+
+/* Make me responsive */
+@media screen and (max-width: 1000px){
+
+}
+
+/*
+  Animation habibi
+*/
+@-webkit-keyframes growAnimation {
+  0%   {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+@keyframes growAnimation {
+  0%   {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
