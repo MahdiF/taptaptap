@@ -289,7 +289,6 @@ var circlesEngine = {
           circlesEngine.evilCircleTap();
         });
         return element;
-        break;
 
       case ".good-circle":
         element.setAttribute('class', 'tpbl-circle c-blue good-circle');
@@ -298,7 +297,6 @@ var circlesEngine = {
           circlesEngine.goodCircleTap(typeOfCircle, numOfCircles);
         });
         return element;
-        break;
 
       default:
     }
